@@ -1,4 +1,4 @@
-package com.example.soundstore.ui.dashboard;
+package com.example.soundstore.ui.favorites;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
