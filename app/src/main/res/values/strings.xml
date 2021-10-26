@@ -2,5 +2,5 @@
     <string name="app_name">Sound Store</string>
     <string name="title_home">Home</string>
     <string name="title_favorites">Favorites</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_store">Store</string>
 </resources>
