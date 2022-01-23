@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout for a song in a list. -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/album_art_image"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/album_art_image_description"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/song_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@id/album_art_image"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/artist_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/song_title"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@id/album_art_image"
+        android:textSize="14sp" />
+</RelativeLayout>

@@ -1,16 +1,20 @@
 package com.example.soundstore;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.soundstore.databinding.ActivityMainBinding;
+import com.example.soundstore.ui.SettingsActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,8 +25,15 @@ public class MainActivity extends AppCompatActivity {
         ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        Toolbar mAppBar = findViewById(R.id.top_app_bar);
-        setSupportActionBar(mAppBar);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setTitle("  Sound Store");
+            actionBar.setIcon(R.drawable.outline_headphones_24);
+            actionBar.setDisplayUseLogoEnabled(true);
+            actionBar.setDisplayShowHomeEnabled(true);
+        }
+
+
 
         findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -37,8 +48,19 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
+
         getMenuInflater().inflate(R.menu.app_bar_nav_menu, menu);
-        return true;
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if (item.getItemId() == R.id.action_settings) {
+            startActivity(new Intent(MainActivity.this, SettingsActivity.class));
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

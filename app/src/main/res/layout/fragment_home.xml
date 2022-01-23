@@ -1,22 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Playlists category layout -->
+    <RelativeLayout
+        android:id="@+id/category_playlists"
+        style="@style/CategoryLayoutStyle">
+
+        <TextView
+            style="@style/CategoryTextStyle"
+            android:text="@string/title_activity_playlists"
+            app:drawableStartCompat="@drawable/ic_playlist" />
+
+        <ImageView style="@style/ChevronIconStyle"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <!-- Songs category layout -->
+    <RelativeLayout
+        android:id="@+id/category_songs"
+        style="@style/CategoryLayoutStyle">
+
+        <TextView
+            style="@style/CategoryTextStyle"
+            android:text="@string/title_activity_songs"
+            app:drawableStartCompat="@drawable/ic_music" />
+
+        <ImageView style="@style/ChevronIconStyle"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <!-- Albums category layout -->
+    <RelativeLayout
+        android:id="@+id/category_albums"
+        style="@style/CategoryLayoutStyle">
+
+        <TextView
+            style="@style/CategoryTextStyle"
+            android:text="@string/title_activity_albums"
+            app:drawableStartCompat="@drawable/ic_album" />
+
+
+        <ImageView style="@style/ChevronIconStyle"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <!-- Saved category layout -->
+    <RelativeLayout
+        android:id="@+id/category_downloads"
+        style="@style/CategoryLayoutStyle">
+
+        <TextView
+            style="@style/CategoryTextStyle"
+            android:text="@string/title_activity_downloads"
+            app:drawableStartCompat="@drawable/ic_saved" />
+
+
+        <ImageView style="@style/ChevronIconStyle"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+</LinearLayout>
