@@ -13,7 +13,9 @@
         android:theme="@style/Theme.SoundStore">
         <activity
             android:name=".ui.NowPlayingActivity"
-            android:exported="false">
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />

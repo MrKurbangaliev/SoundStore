@@ -8,19 +8,21 @@
     <string name="title_activity_songs">Songs</string>
     <string name="title_activity_albums">Albums</string>
     <string name="title_activity_downloads">Downloads</string>
+
     <!-- Preference Titles -->
-    <string name="messages_header">Messages</string>
-    <string name="sync_header">Sync</string>
+    <string name="general_settings">General</string>
 
-    <!-- Messages Preferences -->
-    <string name="signature_title">Your signature</string>
-    <string name="reply_title">Default reply action</string>
-
-    <!-- Sync Preferences -->
-    <string name="sync_title">Sync email periodically</string>
-    <string name="attachment_title">Download incoming attachments</string>
-    <string name="attachment_summary_on">Automatically download attachments for incoming emails
-    </string>
-    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <!-- General Preferences -->
+    <string name="auto_play_title">Auto-play music</string>
+    <string name="automatic_download">Download music automatically</string>
+    <string name="auto_download_summary_on">Automatically download trek for when its played</string>
+    <string name="auto_download_summary_off">Only download music when manually requested</string>
     <string name="album_art_image_description">Album art image</string>
+    <string name="play_button">Play button</string>
+    <string name="previous_song_button">Previous song button</string>
+    <string name="next_song_button">Next song button</string>
+    <string name="album_art_picture">Album art picture</string>
+    <string name="add_to_playlist">Add to playlist</string>
+    <string name="add_to_favorites">Add to favorites</string>
+    <string name="delete_song">Delete song</string>
 </resources>

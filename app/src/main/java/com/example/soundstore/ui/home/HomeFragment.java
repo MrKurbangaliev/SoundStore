@@ -22,7 +22,6 @@ public class HomeFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-//        HomeViewModel homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
@@ -31,27 +30,14 @@ public class HomeFragment extends Fragment {
         final RelativeLayout songs = binding.categorySongs;
         final RelativeLayout albums = binding.categoryAlbums;
         final RelativeLayout downloads = binding.categoryDownloads;
-//        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 
-        playlists.setOnClickListener(view -> {
-            Intent playlistsIntent = new Intent(getActivity(), PlaylistsActivity.class);
-            startActivity(playlistsIntent);
-        });
+        playlists.setOnClickListener(view -> startActivity(new Intent(getActivity(), PlaylistsActivity.class)));
 
-        songs.setOnClickListener(view -> {
-            Intent playlistsIntent = new Intent(getActivity(), SongsActivity.class);
-            startActivity(playlistsIntent);
-        });
+        songs.setOnClickListener(view -> startActivity(new Intent(getActivity(), SongsActivity.class)));
 
-        albums.setOnClickListener(view -> {
-            Intent playlistsIntent = new Intent(getActivity(), AlbumsActivity.class);
-            startActivity(playlistsIntent);
-        });
+        albums.setOnClickListener(view -> startActivity(new Intent(getActivity(), AlbumsActivity.class)));
 
-        downloads.setOnClickListener(view -> {
-            Intent playlistsIntent = new Intent(getActivity(), DownloadsActivity.class);
-            startActivity(playlistsIntent);
-        });
+        downloads.setOnClickListener(view -> startActivity(new Intent(getActivity(), DownloadsActivity.class)));
 
         return root;
     }

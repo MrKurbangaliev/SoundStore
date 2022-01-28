@@ -3,36 +3,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E3F2FD"
     tools:context=".ui.NowPlayingActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@id/seekBar"
         android:layout_centerInParent="true"
+        android:layout_marginBottom="50dp"
         android:orientation="vertical">
 
         <ImageView
             android:id="@+id/album_art"
-            android:layout_width="280dp"
-            android:layout_height="280dp"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/album_art_example" />
+            android:src="@drawable/album_art_example"
+            android:contentDescription="@string/album_art_picture" />
 
         <TextView
+            android:id="@+id/song_title_field"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="24dp"
-            android:text="Title"
             android:textColor="@color/black"
             android:textSize="22sp" />
 
         <TextView
+            android:id="@+id/artist_name_field"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Artist name"
+            android:layout_marginTop="5dp"
             android:textSize="18sp" />
     </LinearLayout>
 
@@ -54,24 +57,29 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="48dp"
-        android:background="#E3F2FD"
-        android:src="@drawable/ic_play" />
+        android:background="@color/white"
+        android:src="@drawable/ic_play"
+        android:contentDescription="@string/play_button" />
 
     <ImageButton
+        android:id="@+id/previous_song"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="48dp"
         android:layout_toStartOf="@id/play_button"
-        android:background="#E3F2FD"
-        android:src="@drawable/ic_previous" />
+        android:background="@color/white"
+        android:src="@drawable/ic_previous"
+        android:contentDescription="@string/previous_song_button" />
 
     <ImageButton
+        android:id="@+id/next_song"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="48dp"
         android:layout_toEndOf="@id/play_button"
-        android:background="#E3F2FD"
-        android:src="@drawable/ic_next" />
+        android:background="@color/white"
+        android:src="@drawable/ic_next"
+        android:contentDescription="@string/next_song_button" />
 </RelativeLayout>

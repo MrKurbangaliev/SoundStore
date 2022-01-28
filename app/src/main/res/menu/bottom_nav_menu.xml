@@ -15,5 +15,4 @@
         android:id="@+id/navigation_store"
         android:icon="@drawable/baseline_shopping_cart_24"
         android:title="@string/title_store" />
-
 </menu>
